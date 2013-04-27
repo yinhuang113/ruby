@@ -1,0 +1,121 @@
+= form_for @ticket do |f|
+  - if @ticket.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@ticket.errors.count, "error")} prohibited this ticket from being saved:"
+      %ul
+        - @ticket.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :company_id
+    = f.number_field :company_id
+  .field
+    = f.label :user_id
+    = f.number_field :user_id
+  .field
+    = f.label :phone
+    = f.text_field :phone
+  .field
+    = f.label :extension
+    = f.text_field :extension
+  .field
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :site_city
+    = f.text_field :site_city
+  .field
+    = f.label :site_zip
+    = f.text_field :site_zip
+  .field
+    = f.label :site_phone
+    = f.text_field :site_phone
+  .field
+    = f.label :agreement_project
+    = f.text_field :agreement_project
+  .field
+    = f.label :status
+    = f.text_field :status
+  .field
+    = f.label :type
+    = f.text_field :type
+  .field
+    = f.label :location
+    = f.text_field :location
+  .field
+    = f.label :source
+    = f.text_field :source
+  .field
+    = f.label :budgeted_hours
+    = f.text_field :budgeted_hours
+  .field
+    = f.label :priority_level
+    = f.text_field :priority_level
+  .field
+    = f.label :description
+    = f.text_area :description
+  .field
+    = f.label :notes
+    = f.text_area :notes
+  .field
+    = f.label :tasks
+    = f.text_field :tasks
+  .field
+    = f.label :resource
+    = f.text_field :resource
+  .field
+    = f.label :schedule
+    = f.text_field :schedule
+  .field
+    = f.label :device
+    = f.text_field :device
+  .field
+    = f.label :despatcher
+    = f.text_field :despatcher
+  .field
+    = f.label :account_manager
+    = f.text_field :account_manager
+  .field
+    = f.label :open_tickets_device
+    = f.text_field :open_tickets_device
+  .field
+    = f.label :open_ticket_user_id
+    = f.number_field :open_ticket_user_id
+  .field
+    = f.label :open_ticket_company_id
+    = f.text_field :open_ticket_company_id
+  .field
+    = f.label :time_entry_standard
+    = f.text_field :time_entry_standard
+  .field
+    = f.label :time_entry_completed
+    = f.text_field :time_entry_completed
+  .field
+    = f.label :phone_logs
+    = f.text_area :phone_logs
+  .field
+    = f.label :documents
+    = f.text_field :documents
+  .field
+    = f.label :sales_task
+    = f.text_field :sales_task
+  .field
+    = f.label :products_name
+    = f.text_field :products_name
+  .field
+    = f.label :products_price
+    = f.text_field :products_price
+  .field
+    = f.label :products_stocklevel
+    = f.text_field :products_stocklevel
+  .field
+    = f.label :expenses
+    = f.text_field :expenses
+  .field
+    = f.label :survey_results
+    = f.text_field :survey_results
+  .field
+    = f.label :knowledgebase_articles
+    = f.text_field :knowledgebase_articles
+  .actions
+    = f.submit 'Save'

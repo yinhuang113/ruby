@@ -1,0 +1,91 @@
+%h1 Listing tickets
+
+%table
+  %tr
+    %th Company
+    %th User
+    %th Phone
+    %th Extension
+    %th Email
+    %th Site city
+    %th Site zip
+    %th Site phone
+    %th Agreement project
+    %th Status
+    %th Type
+    %th Location
+    %th Source
+    %th Budgeted hours
+    %th Priority level
+    %th Description
+    %th Notes
+    %th Tasks
+    %th Resource
+    %th Schedule
+    %th Device
+    %th Despatcher
+    %th Account manager
+    %th Open tickets device
+    %th Open ticket user
+    %th Open ticket company
+    %th Time entry standard
+    %th Time entry completed
+    %th Phone logs
+    %th Documents
+    %th Sales task
+    %th Products name
+    %th Products price
+    %th Products stocklevel
+    %th Expenses
+    %th Survey results
+    %th Knowledgebase articles
+    %th
+    %th
+    %th
+
+  - @tickets.each do |ticket|
+    %tr
+      %td= ticket.company_id
+      %td= ticket.user_id
+      %td= ticket.phone
+      %td= ticket.extension
+      %td= ticket.email
+      %td= ticket.site_city
+      %td= ticket.site_zip
+      %td= ticket.site_phone
+      %td= ticket.agreement_project
+      %td= ticket.status
+      %td= ticket.type
+      %td= ticket.location
+      %td= ticket.source
+      %td= ticket.budgeted_hours
+      %td= ticket.priority_level
+      %td= ticket.description
+      %td= ticket.notes
+      %td= ticket.tasks
+      %td= ticket.resource
+      %td= ticket.schedule
+      %td= ticket.device
+      %td= ticket.despatcher
+      %td= ticket.account_manager
+      %td= ticket.open_tickets_device
+      %td= ticket.open_ticket_user_id
+      %td= ticket.open_ticket_company_id
+      %td= ticket.time_entry_standard
+      %td= ticket.time_entry_completed
+      %td= ticket.phone_logs
+      %td= ticket.documents
+      %td= ticket.sales_task
+      %td= ticket.products_name
+      %td= ticket.products_price
+      %td= ticket.products_stocklevel
+      %td= ticket.expenses
+      %td= ticket.survey_results
+      %td= ticket.knowledgebase_articles
+      %td= link_to 'Show', ticket
+      %td= link_to 'Edit', edit_ticket_path(ticket)
+      %td= link_to 'Destroy', ticket, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Ticket', new_ticket_path

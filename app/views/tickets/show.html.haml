@@ -1,0 +1,117 @@
+%p#notice= notice
+
+%p
+  %b Company:
+  = @ticket.company_id
+%p
+  %b User:
+  = @ticket.user_id
+%p
+  %b Phone:
+  = @ticket.phone
+%p
+  %b Extension:
+  = @ticket.extension
+%p
+  %b Email:
+  = @ticket.email
+%p
+  %b Site city:
+  = @ticket.site_city
+%p
+  %b Site zip:
+  = @ticket.site_zip
+%p
+  %b Site phone:
+  = @ticket.site_phone
+%p
+  %b Agreement project:
+  = @ticket.agreement_project
+%p
+  %b Status:
+  = @ticket.status
+%p
+  %b Type:
+  = @ticket.type
+%p
+  %b Location:
+  = @ticket.location
+%p
+  %b Source:
+  = @ticket.source
+%p
+  %b Budgeted hours:
+  = @ticket.budgeted_hours
+%p
+  %b Priority level:
+  = @ticket.priority_level
+%p
+  %b Description:
+  = @ticket.description
+%p
+  %b Notes:
+  = @ticket.notes
+%p
+  %b Tasks:
+  = @ticket.tasks
+%p
+  %b Resource:
+  = @ticket.resource
+%p
+  %b Schedule:
+  = @ticket.schedule
+%p
+  %b Device:
+  = @ticket.device
+%p
+  %b Despatcher:
+  = @ticket.despatcher
+%p
+  %b Account manager:
+  = @ticket.account_manager
+%p
+  %b Open tickets device:
+  = @ticket.open_tickets_device
+%p
+  %b Open ticket user:
+  = @ticket.open_ticket_user_id
+%p
+  %b Open ticket company:
+  = @ticket.open_ticket_company_id
+%p
+  %b Time entry standard:
+  = @ticket.time_entry_standard
+%p
+  %b Time entry completed:
+  = @ticket.time_entry_completed
+%p
+  %b Phone logs:
+  = @ticket.phone_logs
+%p
+  %b Documents:
+  = @ticket.documents
+%p
+  %b Sales task:
+  = @ticket.sales_task
+%p
+  %b Products name:
+  = @ticket.products_name
+%p
+  %b Products price:
+  = @ticket.products_price
+%p
+  %b Products stocklevel:
+  = @ticket.products_stocklevel
+%p
+  %b Expenses:
+  = @ticket.expenses
+%p
+  %b Survey results:
+  = @ticket.survey_results
+%p
+  %b Knowledgebase articles:
+  = @ticket.knowledgebase_articles
+
+= link_to 'Edit', edit_ticket_path(@ticket)
+\|
+= link_to 'Back', tickets_path
